@@ -1,0 +1,22 @@
+package com.bookMovies.tickets.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import lombok.Data;
+import jakarta.persistence.*;
+
+
+@Entity
+@Data
+public class TheatrePartner {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String email;
+    private String contactNumber;
+    private boolean active;
+}
